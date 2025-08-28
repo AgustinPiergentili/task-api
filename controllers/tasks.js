@@ -1,49 +1,52 @@
 import taskModelo from "../models/task.js";
 
 class taskController {
+    // Constructor de la clase, sin lógica inicial.
     constructor() {
     }
+
+    // Crea una nueva tarea en la base de datos.
     async create(req, res) {
-        try{
+        try {
             const data = await taskModelo.create(req.body);
             res.status(201).json(data);
-        } catch(e) {
+        } catch (e) {
             res.status(500).send(e);
         }
     }
 
-        async update(req, res) {
-          try{
-            res.status(201).json({message: "update"});
-        } catch(e) {
+    // Actualiza una tarea existente.
+    async update(req, res) {
+        try {
+            res.status(201).json({ message: "update" });
+        } catch (e) {
             res.status(500).send(e);
         }
     }
 
-        async delete(req, res) {
-        try{
-            res.status(201).json({message: "delete"});
-        } catch(e) {
+    // Elimina una tarea de la base de datos.
+    async delete(req, res) {
+        try {
+            res.status(201).json({ message: "delete" });
+        } catch (e) {
             res.status(500).send(e);
         }
     }
 
-        async getAll(req, res) {
-        try{
-            res.status(201).json({message: "get all"});
-        } catch(e) {
-            res.status(500).send(e);
-        }
-
-    }
-        async getOne(req, res) {
-            try{
-            res.status(201).json({message: "get one"});
-        } catch(e) {
+    // Obtiene todas las tareas de la base de datos.
+    async getAll(req, res) {
+        try {
+            res.status(201).json({ message: "get all" });
+        } catch (e) {
             res.status(500).send(e);
         }
     }
-}
 
-
-export default new taskController();
+    // Obtiene una sola tarea de la base de datos.
+    async getOne(req, res) {
+        try {
+            res.status(201).json({ message: "get one" });
+        } catch (e) {
+            res.status(500).send(e);
+        }
+    }
