@@ -4,7 +4,7 @@ import bodyParser from 'body-parser';
 
 const app = express();
 
-// Configura la aplicación para procesar los cuerpos de las solicitudes en formato JSON y URL-encoded.
+// Configura la aplicación para procesar los cuerpos de las solicitudes en formato JSON.
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 

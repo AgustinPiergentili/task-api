@@ -13,7 +13,7 @@ Para que el proyecto funcione, primero necesitás tener [Node.js](https://nodejs
 Luego, la única librería principal que este proyecto necesita descargar es **Express.js**. Para instalarla, junto con las demás dependencias de desarrollo, simplemente abrí una terminal en la carpeta del proyecto y ejecutá:
 
 ```bash
-npm install
+npm install express
 ```
 Este comando leerá el archivo `package.json` e instalará todo lo necesario.
 

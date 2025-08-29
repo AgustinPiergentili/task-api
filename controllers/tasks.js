@@ -27,7 +27,8 @@ class taskController {
     // Elimina una tarea de la base de datos.
     async delete(req, res) {
         try {
-            res.status(201).json({ message: "delete" });
+            const data = await taskModelo.getAll();
+            res.status(201).json(data);
         } catch (e) {
             res.status(500).send(e);
         }
@@ -50,3 +51,6 @@ class taskController {
             res.status(500).send(e);
         }
     }
+}
+
+export default new taskController();
